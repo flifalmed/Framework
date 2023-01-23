@@ -1,0 +1,61 @@
+@use "../helpers/mixins" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+//grid system for rows
+$grid_cols: 12;
+@for $i from 1 through $grid_cols {
+  .col-#{$i} {
+    width: percentage($i / $grid_cols);
+  }
+}
+$grid_rows: 12;
+@for $i from 1 through $grid_rows {
+  .row-#{$i} {
+    height: percentage($i / $grid_rows);
+  }
+}
+//container padding
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@include breakpoints(small) {
+  .container {
+    width: 540px;
+  }
+}
+@include breakpoints(medium) {
+  .container {
+    width: 720px;
+  }
+}
+@include breakpoints(large) {
+  .container {
+    width: 960px;
+  }
+}
+@include breakpoints(x-large) {
+  .container {
+    width: 1140px;
+  }
+}
+@include breakpoints(xx-large) {
+  .container {
+    width: 1320px;
+  }
+}

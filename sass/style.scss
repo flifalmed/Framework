@@ -1,0 +1,21 @@
+@use "./layout/global-rules" as *;
+
+@use "./helpers/mixins" as *;
+
+@use "./layout/variables" as *;
+
+//work zone breakpoint none
+
+//media query
+@include breakpoints(x-small) {
+}
+@include breakpoints(small) {
+}
+@include breakpoints(medium) {
+}
+@include breakpoints(large) {
+}
+@include breakpoints(x-large) {
+}
+@include breakpoints(xx-large) {
+}
